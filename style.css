@@ -43,6 +43,57 @@ h1 {
    font-family: PT Sans;
 }
 
+.dropbtn {
+   background-color: black;
+   color: rgb(7, 7, 7);
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+}
+
+/* The container <div> - needed to position the dropup content */
+.dropup {
+   position: relative;
+   display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropup-content {
+   display: none;
+   position: absolute;
+   background-color: #333232dc;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(160, 32, 32, 0.2);
+   z-index: 1;
+}
+
+/* Links inside the dropup */
+.dropup-content a {
+   color: rgb(223, 219, 219);
+   padding: 10px 14px;
+   text-decoration: none;
+   display: block;
+   font-size: 14px;
+}
+
+/* Change color of dropup links on hover */
+.dropup-content a:hover {
+   background-color: rgb(63, 62, 62);
+}
+
+/* Show the dropup menu on hover */
+.dropup:hover .dropup-content {
+   display: block;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropup:hover .dropbtn {
+   background-color: #252525;
+}
+
+li {
+   list-style-type: none;
+}
 /*      <!-- <Content 1> -->*/
 
 .first-screen {
@@ -96,7 +147,6 @@ h1 {
 }
 
 .season p {
-   font-family: Playfair Display;
    padding-top: 75px;
    color: white;
 }
@@ -357,7 +407,7 @@ input[type="text"] {
    margin-top: 40px;
    padding-left: 10px;
    font-family: PT Sans;
-   width: 210px;
+   max-width: 160px;
    height: 42px;
    cursor: pointer;
    border: none;
@@ -367,12 +417,18 @@ input[type="submit"] {
    background: #0f0f0f;
    font-family: PT Sans;
    font-size: 14px;
-   width: 140px;
+   /* max-width: 140px; */
    height: 42px;
-   margin-left: -2px;
-   margin-top: 3px;
+   margin-left: -3px;
+   /* margin-top: 3px; */
    cursor: pointer;
    border: none;
+}
+
+.emil {
+   padding-bottom: 20px;
+   /* width: 320px; */
+   text-align: center;
 }
 
 /*<!-- <last-line> -->*/
@@ -413,6 +469,9 @@ input[type="submit"] {
    .footer {
       margin-top: 50px;
    }
+   /* .emil {
+      max-width: 100%;
+   } */
 }
 
 @media (max-width: 988px) {
@@ -422,17 +481,34 @@ input[type="submit"] {
       min-height: 890px;
    }
    .new-collection {
-      margin-left: 3%;
+      margin-left: 0;
    }
 
    .footer h3 {
       text-align: center;
+   }
+   .logo2 {
+      padding-left: 0px;
+   }
+   .logo2foto {
+      margin-top: -130px;
+   }
+}
+@media (max-width: 760px) {
+   .new-goods {
+      margin-top: 100px;
+      margin-bottom: -1180px;
    }
 }
 
 @media (max-width: 600px) {
    .logo2 {
       padding-left: 0px;
+   }
+
+   .new-goods {
+      margin-top: 0px;
+      margin-bottom: 0px;
    }
 
    .logo2foto {
